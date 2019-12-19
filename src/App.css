@@ -5,6 +5,56 @@
 }
 
 .App .container {
-  width: 500px;
+  width: 400px;
   margin: 0 auto;
+  position: relative;
+}
+.container h1{
+	    position: relative;
+}
+.container h1 span{
+	font-size: 15px;
+    position: absolute;
+    right: 0;
+    bottom: -23px;
+}
+.game-btn{
+  margin: 20px auto 0px auto;
+  display: table;
+  background-color: #456;
+  border: none;
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 2px;
+}
+
+
+.modal{
+	position: absolute;
+    top: 66px;
+    left: 0;
+    right: 0;
+    height: 452px;
+    display: table;
+    width: 100%;
+    background: #cccccca8;
+}
+.modeldiv h1{
+	text-shadow: 2px 2px #fff;
+}
+.game-btn{
+	cursor: pointer;
+	background: #006400ba;
+}
+
+.modeldiv{
+	display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    animation-name: moving;
+ 	animation-duration: 2s;
+}
+@keyframes moving {
+	 from {transform: scale(0.1);}
+ 	 to {transform: scale(1);}
 }

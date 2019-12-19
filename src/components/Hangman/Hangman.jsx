@@ -2,6 +2,7 @@ import React, { useRef, useEffect, useMemo, useState, useCallback } from 'react'
 import PropTypes from 'prop-types';
 import { debounce } from 'lodash';
 
+
 import './Hangman.css';
 
 /**
@@ -110,7 +111,7 @@ const clearCanvas = canvas => {
  * <Hangman incorrectGuessCount={5} />
  * ```
  */
-export const Hangman = ({ incorrectGuessCount = 0 }) => {
+export const Hangman = ({ incorrectGuessCount }) => {
   const containerRef = useRef();
   const canvasRef = useRef();
   const drawnPartsRef = useRef(0);
@@ -164,6 +165,7 @@ export const Hangman = ({ incorrectGuessCount = 0 }) => {
 
   return (
     <div className="Hangman" ref={containerRef}>
+     {/*<span> you have left: {incorrectGuessCount-10}</span>*/}
       <canvas ref={canvasRef} height={size} width={size}></canvas>
     </div>
   );
